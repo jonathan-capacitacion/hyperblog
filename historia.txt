@@ -13,3 +13,5 @@ git show XXXXX muestra los cambios realizados a un archivo entre la ultima versi
 con git reset XX (id del commit a direccionar) --hard se borra todo y se deja al estado del id dado, --soft se mantienen los add en stagin (memoria) y se resetea el codigo.
 
 Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendientes por confirmar
+
+con git log --stat se pueden ver claramente los cambios realizados en cada commit
