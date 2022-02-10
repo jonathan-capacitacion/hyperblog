@@ -11,3 +11,5 @@ con git config user.name y user.email sin --global se reemplaza la firma de los 
 git show XXXXX muestra los cambios realizados a un archivo entre la ultima versión y la anterior
 
 con git reset XX (id del commit a direccionar) --hard se borra todo y se deja al estado del id dado, --soft se mantienen los add en stagin (memoria) y se resetea el codigo.
+
+Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendientes por confirmar
