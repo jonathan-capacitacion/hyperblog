@@ -5,3 +5,5 @@ Tiene 33 años y vive en Bogotá colombia
 Esta haciendo los cursos de Platzi
 
 git rm --cached XXXXXXXXX => Elimina el ultimo add hecho sobre el archivo XXXXXXXXX
+
+con git config user.name y user.email sin --global se reemplaza la firma de los cambios solo en el proyecto actual, para los demas se mantiene la configuración global
