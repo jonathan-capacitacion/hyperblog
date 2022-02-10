@@ -1,0 +1,7 @@
+Esta es la hirtoria de Jonathan
+
+Tiene 33 años y vive en Bogotá colombia
+
+Esta haciendo los cursos de Platzi
+
+git rm --cached XXXXXXXXX => Elimina el ultimo add hecho sobre el archivo XXXXXXXXX
