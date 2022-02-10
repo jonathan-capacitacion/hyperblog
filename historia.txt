@@ -6,11 +6,19 @@ Esta haciendo los cursos de Platzi
 
 1. git rm --cached XXXXXXXXX => Elimina el ultimo add hecho sobre el archivo XXXXXXXXX
 
+    
+    git rm --cached: Elimina los archivos de nuestro repositorio local y del área de staging, pero los mantiene en nuestro disco duro. Básicamente le dice a Git que deje de trackear el historial de cambios de estos archivos, por lo que pasaran a un estado untracked.
+    git rm --force: Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+
 2. con git config user.name y user.email sin --global se reemplaza la firma de los cambios solo en el proyecto actual, para los demas se mantiene la configuración global
 
 3. git show XXXXX muestra los cambios realizados a un archivo entre la ultima versión y la anterior
 
 4. con git reset XX (id del commit a direccionar) --hard se borra todo y se deja al estado del id dado, --soft se mantienen los add en stagin (memoria) y se resetea el codigo.
+    
+    git reset --soft: Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
+    git reset --hard: Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
+    git reset HEAD: Este es el comando para sacar archivos del área de staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
 
 Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendientes por confirmar
 
