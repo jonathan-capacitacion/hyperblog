@@ -33,3 +33,5 @@ Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendient
     git fetch: Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local (en caso de que hayan, por supuesto).
     git merge: También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar los últimos cambios del servidor remoto y nuestro directorio de trabajo.
     git pull: Básicamente, git fetch y git merge al mismo tiempo.
+
+8. Uso de git commit -am "Comentario" - Se puede usar siempre y cuando los archivos ya tengan un add previamente, no para archivos nuevos, automaticamente hace el add y commit.
