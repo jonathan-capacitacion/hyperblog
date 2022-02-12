@@ -35,3 +35,21 @@ Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendient
     git pull: Básicamente, git fetch y git merge al mismo tiempo.
 
 8. Uso de git commit -am "Comentario" - Se puede usar siempre y cuando los archivos ya tengan un add previamente, no para archivos nuevos, automaticamente hace el add y commit.
+
+9. Comandos utiles
+
+    git checkout –b // creará una nueva rama y saltará a ella de forma inmediata
+
+    git branch --list // listará las ramas existentes
+
+    git branch --delete [nombreRama] // borrará la rama que se indique
+
+    git branch –D [nombreRama] // fuerza la eliminación de ramas que aún no han sido fusionadas
+
+    git branch –v // muestra el último commit de cada rama
+
+    git branch --merged // lista las ramas que se fusionaron con la rama actual
+
+    git branch --no-merged // lista las ramas que no se han fusionado con la rama actual
+
+    git merge --abort // anula el merge y devuelve todo a como estaba antes
