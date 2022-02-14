@@ -87,3 +87,26 @@ Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendient
     Añadir la llave privada 
 
         ssh-add -K ~/.ssh/id_rsa
+
+13. ver historia de cambios 
+
+    git log --all --graph --decorate --oneline
+
+14. Crear alias a comandos largos
+
+    alias XXXXXXXXX="git log --all --graph --decorate --oneline"
+
+15. creación de tags en git
+
+    git tag -a v0.1 -m "Resultado de las primeras clases del curso" XXXXXXX (Identificador de commit)
+
+    git show-ref --tags ==> Muestra la relación entre un commit y un tag
+
+    git push origin --tags  ==> Enviar tags a remoto
+
+    git tag -d XXXXXX  ==> Borrar un tag en local
+
+    git push origin :refs/tags/XXXX ==> Borrar tag en remoto
+
+
+
