@@ -62,4 +62,28 @@ Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendient
 
     git pull origin master --allow-unrelated-histories
 
-12.
+12. Generar llaves publica y privada
+
+    Generar una nueva llave SSH: (Cualquier sistema operativo)
+
+    ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+
+        -t = Especifica cual es el algoritmo que vamos a usar para crear esa llave.
+        rsa = Algoritmo a usar, hasta el momento el mas popular.
+        -b = Especifica que tan compleja es la llave.
+        4096 = Complejidad de la llave desde una perspectiva matemática.
+        -C = Indica a que correo electrónico va estar conectado esta llave
+        "tu_email@gmail.com" = Correo electrónico.
+
+    Comprobar proceso y agregarlo (Windows)
+
+        eval $(ssh-agent - s)
+        ssh-add ~/.ssh/id_rsa
+
+    Comprobar proceso y agregarlo (Mac)
+
+        eval "$(ssh-agent -s)"
+
+    Añadir la llave privada 
+
+        ssh-add -K ~/.ssh/id_rsa
