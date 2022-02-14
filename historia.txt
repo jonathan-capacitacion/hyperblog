@@ -108,5 +108,11 @@ Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendient
 
     git push origin :refs/tags/XXXX ==> Borrar tag en remoto
 
+16. Comando para manjo de ramas 
 
+    git show-branch ==> Muestra información de ramas existentes 
+
+    git show-branch --all
+
+    gitk
 
