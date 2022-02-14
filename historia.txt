@@ -53,3 +53,7 @@ Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendient
     git branch --no-merged // lista las ramas que no se han fusionado con la rama actual
 
     git merge --abort // anula el merge y devuelve todo a como estaba antes
+
+10. Agregar un origen remoto 
+
+    git remote add origin https://github.com/jonathan-capacitacion/hyperblog.git
