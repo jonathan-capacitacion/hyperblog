@@ -116,3 +116,75 @@ Se pueden crear mas archivos mientras se tiene en memoria otros cambios pendient
 
     gitk
 
+17. Crear un fork en github se usa para hacer una copia del proyecto y que quede ligado a la cuenta actual
+
+    Para actualizar el fork con lo ultimo de el proyecto original, se debe crear un nuevo origin del proyecto original
+
+        git remote add upstream XXXXXX ==> URL del proyecto original
+
+18. Git clean 
+
+    A veces creamos archivos cuando estamos realizando nuestro proyecto que realmente no forman parte de nuestro directorio de trabajo, que no se deberían agregar y lo sabemos.
+
+    Para saber qué archivos vamos a borrar tecleamos git clean --dry-run
+    Para borrar todos los archivos listados (que no son carpetas) tecleamos git clean -f
+    git clean -d borra directorios
+
+19. Git cherry-pick
+
+    Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando git cherry-pick IDCommit.
+
+    cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia, usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo ten mucho cuidado.
+
+20. git commit --amend
+
+    A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos git commit --amend, amend en inglés es remendar y lo que hará es que los cambios que hicimos nos los agregará al commit anterior.
+
+21. Git Reset y Reflog
+
+    git reflog ==> Muestra todos los cambios realizados en las ramas
+
+    ¿Qué pasa cuando todo se rompe y no sabemos qué está pasando? Con git reset HashDelHEAD nos devolveremos al estado en que el proyecto funcionaba.
+
+    git reset --SOFT HashDelHEAD te mantiene lo que tengas en staging ahí.
+    git reset --HARD HashDelHEAD resetea absolutamente todo incluyendo lo que tengas en staging.
+
+    git reset es una mala práctica, no deberías usarlo en ningún momento; debe ser nuestro último recurso.
+
+22. git rebase
+
+    dentro de la nueva rama se ejecuta rebase a la rama master y mueve el inicio de la nueva rama
+
+    Primero rebase a la rama de cambios y luego rebase a la rama destino
+
+23. git stash
+
+    Permite devolver a una rama o estado anterior sin perder los cambios actuales.
+
+    git stash list ==> Muestra el stash que se coloco con el id para retomarlo
+
+    git stash pop ==> vuelve a los cambios que se habian guardado
+
+    git stash branch XXXXXX ==> Lleva los cambios en stash a una nueva rama
+
+    git stash drop ==> Borrar lo guardado en stash
+
+    git stash -u : Crea un stash con todos los archivos. (Añadiendo los creados Untracked)
+    
+    git stash save “mensaje” : Crea un stash con el mensaje especificado.
+
+24. git grep
+
+    git grep color -->use la palabra color
+    git grep la --> donde use la palabra la
+    git grep -n color–> en que lineas use la palabra color
+    git grep -n platzi --> en que lineas use la palabra platzi
+    git grep -c la --> cuantas veces use la palabra la
+    git grep -c paltzi --> cuantas veces use la palabra platzi
+    git grep -c “<p>”–> cuantas veces use la etiqueta <p>
+
+    git log-S “cabecera” --> cuantas veces use la palabra cabecera en
+    todos los commits.
+
+    grep–> para los archivos
+    log --> para los commits.
